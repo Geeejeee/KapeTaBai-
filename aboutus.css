@@ -1,0 +1,344 @@
+body {
+    background: url("image/KAPE.png") center center fixed;
+    background-size: cover;
+    /* Cover the full size */
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    /* Ensure the body covers the full viewport height */
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-repeat: no-repeat;
+
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+
+.navbar {
+    background-color: #ffffff;
+    /* Add this line to set the navbar background color */
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.navbar-nav.ml-auto {
+    text-align: center;
+    /* Align the rest of the links to the right */
+    margin-right: 5px;
+}
+
+.navbar-nav.ml-auto .nav-link {
+    color: #793C00;
+    /* White foreground color for navigation links */
+    margin-right: 30px;
+}
+
+.navbar-nav.top-center {
+    text-align: center;
+    /* Align only the specified links to the center */
+    margin: auto;
+    /* Center the navbar links */
+
+}
+
+.navbar-nav.top-center .nav-link {
+    color: #793C00;
+    /* White foreground color for navigation links */
+    margin-right: 30px;
+}
+
+.nav-link {
+    position: relative;
+    overflow: hidden;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.nav-link::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #8B4513;
+    /* Brown color for the line */
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+.nav-link:hover::before {
+    left: 0;
+    width: 100%;
+}
+
+.nav-link:hover {
+    color: #8B4513;
+}
+
+
+
+.navbar-toggler-icon {
+    color: #793C00;
+    /* White color for the menu icon */
+}
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center; /* Add this line to center-align text */
+    padding: 20px; /* Add padding for better spacing */
+    color: white; /* Set text color to white or adjust as needed */
+    margin: auto; /* Add this line to center the container horizontally */
+    max-width: 1200px; /* Optional: Set a max-width for the container */
+}
+
+.logotitle {
+    display: block;
+    margin: 0 auto;
+}
+
+/* Adjust the spacing for CoffeeBlast and logotitle */
+.CoffeeBlast {
+    margin-top: 20px;
+    margin-left: -250px;
+    position: absolute;
+    top: -65px; /* Adjust this value based on your navbar height */
+    left: -145px;
+}
+
+@media (min-width: 576px) {
+    .OurMission,
+        .OurVision {
+            text-align: center;
+        }
+
+        .OurMission p {
+            margin-bottom: 150px;
+        }
+}
+
+/* Style for each section */
+.section {
+    margin-top: 40px;
+}
+
+/* Center align section headers */
+.section h2,
+.section h3 {
+    text-align: center;
+    
+}
+
+/* Justify the section paragraphs */
+.section p {
+    text-align: justify;
+}
+
+/* Update the spacing for OurMission and OurVision */
+.OurMission {
+    margin-top: 20px;
+}
+.OurVision {
+    margin-top: 20px;
+}
+
+/* Create two columns for OurMission and OurVision on larger screens */
+@media (min-width: 768px) {
+    .OurMission {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .OurVision {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .OurMission p{
+        align-items: center;
+    }
+    .OurVision p{
+        align-items: center;
+    }
+
+    .OurMission h2 {
+        margin-right: -515px;
+    } 
+
+    .OurVision h2 {
+        margin-right: -555px;
+    }
+
+    .OurMission p {
+        margin-right: -515px;
+    } 
+
+    .OurVision p {
+        margin-right: -555px;
+    }
+    
+    .OurMission {
+        margin-left: -500px;
+        margin-top: 100px;
+    }
+    .OurVision {
+        margin-left: -600px;
+        margin-top: 100px;
+    }
+}
+
+/* Center align TheKapeTaBaiExperience */
+.TheKapeTaBaiExperience {
+    margin-top: 170px;
+}
+
+/* Center align TheFreshCoffee */
+.TheFreshCoffee {
+    margin-top: 10px;
+}
+
+/* Center align TheKapeTaBaiTeam */
+.TheKapeTaBaiTeam {
+    margin-top: 40px;
+}
+
+
+
+
+
+
+/* Text Container Styles */
+.AboutUsKapeTaBai {
+    color: #603809;
+    font-size: 49px;
+    font-family: Playfair Display;
+    font-weight: 700;
+    word-wrap: break-word;
+}
+
+.TheStory {
+    color: #603809;
+    font-size: 38px;
+    font-family: Playfair Display;
+    font-weight: 700;
+    word-wrap: break-word;
+}
+
+.TheKapeTaBaiExperience {
+    color: #603809;
+    font-size: 38px;
+    font-family: Playfair Display;
+    font-weight: 700;
+    word-wrap: break-word;
+}
+
+.TheFreshCoffee {
+    color: #603809;
+    font-size: 38px;
+    font-family: Playfair Display;
+    font-weight: 700;
+    word-wrap: break-word;
+}
+
+.OurMission {
+    color: #603809;
+    font-size: 38px;
+    font-family: Playfair Display;
+    font-weight: 700;
+    word-wrap: break-word;
+}
+
+.OurVision {
+    color: #603809;
+    font-size: 38px;
+    font-family: Playfair Display;
+    font-weight: 700;
+    word-wrap: break-word
+}
+
+
+
+/* Text Styles */
+.AboutUsKapeTaBai p{
+    color: black;
+    font-size: 24px;
+    font-family: Imprima;
+    font-weight: 400;
+    word-wrap: break-word;
+
+}
+
+.TheStory p{
+    color: black;
+    font-size: 24px;
+    font-family: Imprima;
+    font-weight: 400;
+    word-wrap: break-word;
+}
+
+.TheKapeTaBaiExperience p{
+    color: black;
+    font-size: 24px;
+    font-family: Imprima;
+    font-weight: 400;
+    word-wrap: break-word;
+
+}
+
+.TheFreshCoffee p {
+    color: black;
+    font-size: 24px;
+    font-family: Imprima;
+    font-weight: 400;
+    word-wrap: break-word;  
+}
+
+.OurMission p {
+    width: 468px;
+    height: 89px;
+    position: inherit;
+    text-align: justify;
+    color: black;
+    font-size: 24px;
+    font-family: Imprima;
+    font-weight: 400;
+    word-wrap: break-word;
+    margin-bottom: 120px;
+}
+
+.OurVision p {
+    width: 468px;
+    height: 89px;
+    position: inherit;
+    text-align: justify;
+    color: black;
+    font-size: 24px;
+    font-family: Imprima;
+    font-weight: 400;
+    word-wrap: break-word;
+}
+
+.TheKapeTaBaiTeam p {
+    width: 1156px;
+    font-size: 24px;
+    font-family: Imprima;
+    font-weight: 400;
+    word-wrap: break-word;
+    color: black;
+    margin-top: 125%;
+    margin-left: 35%;
+}
+

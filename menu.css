@@ -1,0 +1,685 @@
+body {
+    background: url("image/KAPE.png") center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-repeat: no-repeat;
+}
+
+body.navbar-expanded .container {
+    margin-top: 350px; /* Adjust this value based on your navbar height */
+}
+
+@media (max-width: 768px) {
+    .menu-1,
+    .menu-2 {
+        flex-direction: column;
+    }
+
+    .menu-1 .capuccino,
+    .menu-1 .chai,
+    .menu-1 .macchiato,
+    .menu-1 .expresso,
+    .menu-2 .capuccino,
+    .menu-2 .chai,
+    .menu-2 .macchiato,
+    .menu-2 .expresso {
+        max-width: 100%;
+        margin-top: 5%;
+        margin-left: -175px;
+    }
+
+    .menu-1 .capuccino,
+    .menu-2 .capuccino {
+        order: 1;
+    }
+
+    .menu-1 .chai,
+    .menu-2 .chai {
+        order: 2;
+    }
+
+    .menu-1 .macchiato,
+    .menu-2 .macchiato {
+        order: 3;
+    }
+
+    .menu-1 .expresso,
+    .menu-2 .expresso {
+        order: 4;
+    }
+
+    .content h1 {
+        color: var(--coffee, #603809);
+        font-family: "Playfair Display";
+        font-size: 160%;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-top: 2%;
+        margin-left: -350px;
+        text-align: center;
+    }
+
+    .content p {
+        max-width: 100%;
+        width: 100%;
+        height: 100%;
+        font-size: 90%;
+        text-align: center;
+        margin-left: -175px;
+    }
+
+    .menu-1 .p2 {
+        font-size: 8vw;
+    }
+    .menu-1 .p3 {
+        font-size: 6vw;
+    }
+    .menu-1 .p4 {
+        font-size: 8vw;
+    }
+    .menu-1 .button {
+        font-size: 7vw;
+    }
+
+    .menu-1 .p5 {
+        font-size: 8vw;
+    }
+    .menu-1 .p6 {
+        font-size: 6vw;
+    }
+    .menu-1 .p7 {
+        font-size: 8vw;
+    }
+
+    .menu-1 .p8 {
+        font-size: 8vw;
+    }
+    .menu-1 .p9 {
+        font-size: 6vw;
+    }
+    .menu-1 .p10 {
+        font-size: 8vw;
+    }
+    
+    .menu-1 .p11 {
+        font-size: 8vw;
+    }
+    .menu-1 .p12 {
+        font-size: 6vw;
+    }
+    .menu-1 .p13 {
+        font-size: 8vw;
+    }
+
+    
+    .menu-2 .p2 {
+        font-size: 8vw;
+    }
+    .menu-2 .p3 {
+        font-size: 6vw;
+    }
+    .menu-2 .p4 {
+        font-size: 8vw;
+    }
+    .menu-2 .button {
+        font-size: 7vw;
+    }
+
+    .menu-2 .p5 {
+        font-size: 8vw;
+    }
+    .menu-2 .p6 {
+        font-size: 6vw;
+    }
+    .menu-2 .p7 {
+        font-size: 8vw;
+    }
+
+    .menu-2 .p8 {
+        font-size: 8vw;
+    }
+    .menu-2 .p9 {
+        font-size: 6vw;
+    }
+    .menu-2 .p10 {
+        font-size: 8vw;
+    }
+    
+    .menu-2 .p11 {
+        font-size: 8vw;
+    }
+    .menu-2 .p12 {
+        font-size: 6vw;
+    }
+    .menu-2 .p13 {
+        font-size: 8vw;
+    }
+}
+
+.navbar {
+    background-color: #ffffff;
+    /* Add this line to set the navbar background color */
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.navbar-nav.ml-auto {
+    text-align: center;
+    /* Align the rest of the links to the right */
+    margin-right: 5px;
+}
+
+.navbar-nav.ml-auto .nav-link {
+    color: #793C00;
+    /* White foreground color for navigation links */
+    margin-right: 30px;
+}
+
+.navbar-nav.top-center {
+    text-align: center;
+    /* Align only the specified links to the center */
+    margin: auto;
+    /* Center the navbar links */
+
+}
+
+.navbar-nav.top-center .nav-link {
+    color: #793C00;
+    /* White foreground color for navigation links */
+    margin-right: 30px;
+}
+
+.nav-link {
+    position: relative;
+    overflow: hidden;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.nav-link::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #8B4513;
+    /* Brown color for the line */
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+.nav-link:hover::before {
+    left: 0;
+    width: 100%;
+}
+
+.nav-link:hover {
+    color: #8B4513;
+}
+
+.navbar-toggler-icon {
+    color: #793C00;
+    /* White color for the menu icon */
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 1;
+	margin-top: 80px;
+	margin-left: 280px;
+    transition: margin-top 0.3s;
+}	
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px;
+    margin-left: -100px;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: auto;
+}	
+
+h1 {
+    color: var(--coffee, #603809);
+    font-family: "Playfair Display";
+    font-size: 2vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: 2%;
+    margin-left: 15%;
+}
+
+.p1 {
+    color: #707070;
+    text-align: left; /* Center the text horizontally */
+    font-family: "Playfair Display";
+    font-size: 1vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 34px; /* 170% */
+    margin-top: 1%;
+	margin-left: 14%;
+}
+
+.menu-1 {
+	display: flex;
+	justify-content: space-between;
+}
+
+.capuccino {
+	max-width: 20%; /* Adjust as needed */
+    text-align: center; /* Center the content inside each container */
+    border: 1px solid rgba(249, 192, 106, 0.42);
+    background: #FFF9F1;
+    margin-top: 2%;
+}
+
+.chai {
+    max-width: 20%; /* Adjust as needed */
+    text-align: center; /* Center the content inside each container */
+    border: 1px solid rgba(249, 192, 106, 0.42);
+    background: #FFF9F1;
+    margin-top: 2%;
+}
+
+.cappucino-image {
+    width: 100%;
+    height: auto;
+    flex-shrink: 0;
+}
+
+.p2 {
+    color: var(--coffee, #603809);
+    font-family: "Playfair Display";
+    font-size: 1.2vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding-left: 2%;
+    margin: 0; /* Remove default margin */
+	padding-top: 5%;
+}
+
+.p3 {
+    color: #1E1E1E;
+    font-family: "Playfair Display";
+    font-size: 1vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0; /* Remove default margin */
+}
+
+.p4 {
+	color: var(--coffee, #603809);
+	font-family: "Playfair Display";
+	font-size: 1vw;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+}
+
+.button {
+	width: 40%;
+	height: 10%;
+	flex-shrink: 0;
+	border-radius: 24px;
+	background: #F9C06A;
+	box-shadow: 0px 6px 12px 0px rgba(249, 192, 106, 0.22);
+	border: none;
+	color: #1E1E1E;
+	font-family: "Playfair Display";
+	font-size: 1vw;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+}
+.button a {
+    color: #1E1E1E;
+    font-size: 12px;
+    text-decoration-line: none;
+}
+
+.chai-image {
+    width: 100%;
+    height: auto;
+    flex-shrink: 0;
+}
+
+.p5 {
+    color: var(--coffee, #603809);
+    font-family: "Playfair Display";
+    font-size: 1.2vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding-left: 2%;
+    margin: 0; /* Remove default margin */
+	padding-top: 5%;
+}
+
+.p6 {
+    color: #1E1E1E;
+    font-family: "Playfair Display";
+    font-size: 1vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0; /* Remove default margin */
+}
+
+.p7 {
+	color: var(--coffee, #603809);
+	font-family: "Playfair Display";
+	font-size: 1vw;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+}
+
+.macchiato {
+    max-width: 20%; /* Adjust as needed */
+    text-align: center; /* Center the content inside each container */
+    border: 1px solid rgba(249, 192, 106, 0.42);
+    background: #FFF9F1;
+    margin-top: 2%;
+}
+
+.macchiato-image {
+    width: 100%;
+    height: auto;
+    flex-shrink: 0;
+}
+
+.p8 {
+    color: var(--coffee, #603809);
+    font-family: "Playfair Display";
+    font-size: 1.2vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding-left: 2%;
+    margin: 0; /* Remove default margin */
+	padding-top: 5%;
+}
+
+.p9 {
+    color: #1E1E1E;
+    font-family: "Playfair Display";
+    font-size: 1vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0; /* Remove default margin */
+}
+
+.p10 {
+	color: var(--coffee, #603809);
+	font-family: "Playfair Display";
+	font-size: 1vw;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+}
+
+.expresso {
+    max-width: 20%; /* Adjust as needed */
+    text-align: center; /* Center the content inside each container */
+    border: 1px solid rgba(249, 192, 106, 0.42);
+    background: #FFF9F1;
+    margin-top: 2%;
+}
+
+.expresso-image {
+    width: 100%;
+    height: auto;
+    flex-shrink: 0;
+}
+
+.p11 {
+    color: var(--coffee, #603809);
+    font-family: "Playfair Display";
+    font-size: 1.2vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding-left: 2%;
+    margin: 0; /* Remove default margin */
+	padding-top: 5%;
+}
+
+.p12 {
+    color: #1E1E1E;
+    font-family: "Playfair Display";
+    font-size: 1vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0; /* Remove default margin */
+}
+
+.p13 {
+	color: var(--coffee, #603809);
+	font-family: "Playfair Display";
+	font-size: 1vw;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+}
+
+.menu-2 {
+	display: flex;
+	justify-content: space-between;
+}
+
+.capuccino {
+	max-width: 20%; /* Adjust as needed */
+    text-align: center; /* Center the content inside each container */
+    border: 1px solid rgba(249, 192, 106, 0.42);
+    background: #FFF9F1;
+    margin-top: 2%;
+}
+
+.chai {
+    max-width: 20%; /* Adjust as needed */
+    text-align: center; /* Center the content inside each container */
+    border: 1px solid rgba(249, 192, 106, 0.42);
+    background: #FFF9F1;
+    margin-top: 2%;
+}
+
+.cappucino-image {
+    width: 100%;
+    height: auto;
+    flex-shrink: 0;
+}
+
+.p2 {
+    color: var(--coffee, #603809);
+    font-family: "Playfair Display";
+    font-size: 1.2vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding-left: 2%;
+    margin: 0; /* Remove default margin */
+	padding-top: 5%;
+}
+
+.p3 {
+    color: #1E1E1E;
+    font-family: "Playfair Display";
+    font-size: 1vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0; /* Remove default margin */
+}
+
+.p4 {
+	color: var(--coffee, #603809);
+	font-family: "Playfair Display";
+	font-size: 1vw;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+}
+
+.button {
+	width: 40%;
+	height: 10%;
+	flex-shrink: 0;
+	border-radius: 24px;
+	background: #F9C06A;
+	box-shadow: 0px 6px 12px 0px rgba(249, 192, 106, 0.22);
+	border: none;
+	color: #1E1E1E;
+	font-family: "Playfair Display";
+	font-size: 1vw;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+}
+
+.chai-image {
+    width: 100%;
+    height: auto;
+    flex-shrink: 0;
+}
+
+.p5 {
+    color: var(--coffee, #603809);
+    font-family: "Playfair Display";
+    font-size: 1.2vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding-left: 2%;
+    margin: 0; /* Remove default margin */
+	padding-top: 5%;
+}
+
+.p6 {
+    color: #1E1E1E;
+    font-family: "Playfair Display";
+    font-size: 1vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0; /* Remove default margin */
+}
+
+.p7 {
+	color: var(--coffee, #603809);
+	font-family: "Playfair Display";
+	font-size: 1vw;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+}
+
+.macchiato {
+    max-width: 20%; /* Adjust as needed */
+    text-align: center; /* Center the content inside each container */
+    border: 1px solid rgba(249, 192, 106, 0.42);
+    background: #FFF9F1;
+    margin-top: 2%;
+}
+
+.macchiato-image {
+    width: 100%;
+    height: auto;
+    flex-shrink: 0;
+}
+
+.p8 {
+    color: var(--coffee, #603809);
+    font-family: "Playfair Display";
+    font-size: 1.2vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding-left: 2%;
+    margin: 0; /* Remove default margin */
+	padding-top: 5%;
+}
+
+.p9 {
+    color: #1E1E1E;
+    font-family: "Playfair Display";
+    font-size: 1vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0; /* Remove default margin */
+}
+
+.p10 {
+	color: var(--coffee, #603809);
+	font-family: "Playfair Display";
+	font-size: 1vw;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+}
+
+.expresso {
+    max-width: 20%; /* Adjust as needed */
+    text-align: center; /* Center the content inside each container */
+    border: 1px solid rgba(249, 192, 106, 0.42);
+    background: #FFF9F1;
+    margin-top: 2%;
+}
+
+.expresso-image {
+    width: 100%;
+    height: auto;
+    flex-shrink: 0;
+}
+
+.p11 {
+    color: var(--coffee, #603809);
+    font-family: "Playfair Display";
+    font-size: 1.2vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding-left: 2%;
+    margin: 0; /* Remove default margin */
+	padding-top: 5%;
+}
+
+.p12 {
+    color: #1E1E1E;
+    font-family: "Playfair Display";
+    font-size: 1vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0; /* Remove default margin */
+}
+
+.p13 {
+	color: var(--coffee, #603809);
+	font-family: "Playfair Display";
+	font-size: 1vw;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+}
+		

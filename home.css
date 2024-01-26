@@ -1,0 +1,123 @@
+body {
+    background: url("image/coffee_image.png") center center fixed;
+    background-size: cover; /* Cover the full size */
+    margin: 0;
+    padding: 0;
+    min-height: 100vh; /* Ensure the body covers the full viewport height */
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-repeat: no-repeat;
+    
+}
+
+body::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(90deg, #1E1E1E 1.14%, rgba(0, 0, 0, 0.00) 87.45%);
+    z-index: -1;
+}
+
+.navbar-nav.ml-auto {
+    text-align: center; /* Align the rest of the links to the right */
+}
+
+.navbar-nav.ml-auto .nav-link {
+    color: #fff; /* White foreground color for navigation links */
+    margin-right: 30px;
+}
+
+.navbar-nav.top-center {
+    text-align: center; /* Align only the specified links to the center */
+    margin: auto; /* Center the navbar links */
+    
+}
+
+.navbar-nav.top-center .nav-link {
+    color: #fff; /* White foreground color for navigation links */
+    margin-right: 30px;
+}
+
+.nav-link {
+    position: relative;
+    overflow: hidden;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+.nav-link::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #8B4513; /* Brown color for the line */
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+.nav-link:hover::before {
+    left: 0;
+    width: 100%;
+}
+.nav-link:hover {
+    color: #8B4513;
+}
+
+.content {
+    text-align: left;
+    margin: 20px;
+    max-width: 600px; /* Set the maximum width */
+    width: 80%; /* Set the width */
+    color: white;
+    padding: 20px;
+    border-radius: 10px; /* Add rounded corners */
+    margin-top: 2ch;
+    font-size: 50px;
+    
+}
+.content h1{
+    font-size: 80px;
+}
+.content h2{
+    font-size: 80px;
+}
+
+.content2 {
+    text-align: left;
+    margin: 20px;
+    max-width: 600px; 
+    width: 80%;
+    color: white;
+    padding: 20px;
+    border-radius: 10px; 
+    margin-top: -50px;
+    font-size: 25px;
+    
+}
+.content2 p{
+    font-size: 23px;
+}
+
+.order-now-btn {
+    border-radius: 20px;
+    background-color: #8B4513; /* Brown background */
+    color: #fff; /* White foreground */
+    padding: 10px 20px;
+    display: inline-block;
+}
+
+@media screen and (max-width: 1440px) {
+    .navbar-toggler-icon {
+        color: #fff; /* White color for the menu icon */
+    }
+}
+
+@media (max-width: 767px) {
+    .navbar-toggler-icon {
+        color: #fff; /* White color for the menu icon */
+    }
+}

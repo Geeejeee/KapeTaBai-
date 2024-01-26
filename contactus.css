@@ -1,0 +1,367 @@
+body {
+    background: url("image/KAPE.png") center center fixed;
+    background-size: cover;
+    /* Cover the full size */
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    /* Ensure the body covers the full viewport height */
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-repeat: no-repeat;
+
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+
+.navbar {
+    background-color: #ffffff;
+    /* Add this line to set the navbar background color */
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+}
+
+.navbar-nav.ml-auto {
+    text-align: center;
+    /* Align the rest of the links to the right */
+}
+
+.navbar-nav.ml-auto .nav-link {
+    color: #793C00;
+    /* White foreground color for navigation links */
+    margin-right: 30px;
+}
+
+.navbar-nav.top-center {
+    text-align: center;
+    /* Align only the specified links to the center */
+    margin: auto;
+    /* Center the navbar links */
+
+}
+
+.navbar-nav.top-center .nav-link {
+    color: #793C00;
+    /* White foreground color for navigation links */
+    margin-right: 30px;
+}
+
+.nav-link {
+    position: relative;
+    overflow: hidden;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.nav-link::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #8B4513;
+    /* Brown color for the line */
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+.nav-link:hover::before {
+    left: 0;
+    width: 100%;
+}
+
+.nav-link:hover {
+    color: #8B4513;
+}
+
+@media (max-width: 767.98px) {
+  .content-container1 {
+    transform: translate(-43%, 0);
+  }
+  .content-container1 .visitus {
+    transform: translate(45%, 0);
+  }
+
+  .content-container1 .shop-details{
+    transform: translate(-210%, 85%);
+    text-align: left;
+  }
+  .content-container2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .content-container2 .contact-text {
+    transform: translate(-0.1%, 1555%);
+  }
+
+  .content-container2 .description {
+    transform: translate(-1%, 530%);
+  }
+
+  .content-container2 .background-color {
+    transform: translate(-1%, 130%);
+  }
+
+  .content-container1 .shop-info,
+  .content-container2 .contact-text {
+    width: 80%; /* Adjust the width as needed */
+  }
+
+  .content-container2 .contact-info {
+    transform: translate(150%, 60%);
+  }
+  .shopaadd,
+  .contact-info .phone-number,
+  .contact-info .email-address {
+    text-align: justify;
+  }
+
+  .content-container2 .description {
+    padding-top: 0px; /* Adjust the padding as needed */
+  }
+}
+
+.content-container1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.shop-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-left: -150px;
+  transform: translate(60%, 0);
+}
+
+.visitus {
+  width: 100%;
+  color: #603809;
+  font-size: 49px;
+  font-family: Playfair Display;
+  font-weight: 700;
+  text-align: center;
+  word-wrap: break-word;
+  transform: translate(50%, 0);
+}
+
+.shopaadd {
+  margin-left: 100px;
+  color: black;
+  font-size: 20px;
+  font-family: Playfair Display;
+  font-weight: 400;
+  line-height: 34px;
+  word-wrap: break-word;
+}
+
+.shop-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.addresstitle {
+  margin-left: 80px;
+  color: #603809;
+  font-size: 49px;
+  font-family: Playfair Display;
+  font-weight: 700;
+  word-wrap: break-word;
+}
+
+.opentime {
+  margin-left: 80px;
+  color: #603809;
+  font-size: 49px;
+  font-family: Playfair Display;
+  font-weight: 700;
+  word-wrap: break-word;
+}
+
+.opendate {
+  margin-left: 100px;
+  color: black;
+  font-size: 20px;
+  font-family: Playfair Display;
+  font-weight: 400;
+  line-height: 34px;
+  word-wrap: break-word;
+  text-align: justify;
+}
+
+.shopimage {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 767.98px) {
+  .shopimage {
+    width: 100%;
+  }
+}
+
+.content-container2 {
+  width: 100%;
+  text-align: center;
+  color: #707070;
+  font-size: 20px;
+  font-family: Playfair Display;
+  font-weight: 400;
+  line-height: 34px;
+}
+
+.contact-text {
+  width: 100%;
+  text-align: center;
+  color: #603809;
+  font-size: 49px;
+  font-family: Playfair Display;
+  font-weight: 700;
+  word-wrap: break-word;
+  margin-bottom: 20px;
+  transform: translate(-50%, 2500%);
+}
+
+.description {
+  width: 100%;
+  padding-top: 25px;
+  box-sizing: border-box;
+  transform: translate(-50%, 900%);
+}
+
+.background-color {
+  width: 100%;
+  max-width: 564px;
+  height: 420px;
+  background: #793C00;
+  border-radius: 8px;
+  margin: 20px auto;
+  position: relative;
+  transform: translate(-50%, 220%);
+}
+
+.send-message {
+  width: 100%;
+  color: white;
+  font-size: 28px;
+  font-family: Inter;
+  font-weight: 700;
+  word-wrap: break-word;
+  margin-top: 20px;
+}
+
+.white-box {
+  width: 100%;
+  height: 37px;
+  background: white;
+  border-radius: 4px;
+  margin: 20px 0;
+}
+
+.send-button {
+  width: 100%;
+  height: 37px;
+  color: #793C00;
+  font-size: 19px;
+  font-family: Inter;
+  font-weight: 700;
+  word-wrap: break-word;
+  margin-top: 10px;
+  box-sizing: border-box;
+  margin-bottom: 20%;
+  transform: translate(20%, -40%);
+  background-color: white;
+  color: #793C00;
+  border: transparent;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.send-button:hover {
+  background-color: #c5a359;
+  color: rgb(0, 0, 0);
+}
+
+.contact-info {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto 20px;
+  margin-left: 200px;
+  position: relative;
+}
+
+.contact-info .phone-text,
+.contact-info .email-text {
+  color: #603809;
+  font-size: 49px;
+  font-family: Playfair Display;
+  font-weight: 700;
+  word-wrap: break-word;
+  padding-top: 20px;
+  box-sizing: border-box;
+  transform: translate(-200%, 890%);
+}
+
+.contact-info .phone-number,
+.contact-info .email-address {
+  color: black;
+  font-size: 24px;
+  font-family: Inter;
+  font-weight: 20;
+  line-height: 34px;
+  padding-top: 10px;
+  box-sizing: border-box;
+  text-align: left;
+  transform: translate(-166%, 1100%);
+}
+
+.input-labels {
+  width: 100%;
+  max-width: 400px;
+  text-align: left;
+  padding-left: 1%;
+  box-sizing: border-box;
+}
+
+.fullname-label,
+.email-label,
+.message-label {
+  color: white;
+  font-size: 14px;
+  font-weight: 400;
+  word-wrap: break-word;
+  padding-top: 20px;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+.input-labels input[type="text"],
+.input-labels input[type="email"],
+.input-labels input[type="message"] {
+  width: 140%;
+  max-width: 500%;
+  height: 30px;
+  margin-bottom: 5px;
+  padding: 1px;
+  box-sizing: border-box;
+  background: transparent; /* Make the input fields transparent */
+  border: none;
+  border-bottom: 1px solid #fff;
+  color: #fff;
+  text-align: center; /* Center the input fields */
+}
